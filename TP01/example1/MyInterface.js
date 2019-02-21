@@ -29,6 +29,7 @@ class MyInterface extends CGFinterface {
         this.gui.add(this.scene, 'displayBigTriangle').name("Big Triangle");
         this.gui.add(this.scene, 'displayParalelogram').name("Paralelogram");
         this.gui.add(this.scene, 'displayCircle').name("Circle");
+        this.gui.add(this.scene.circle, 'n_vertices').name("Circle Vertices");
 
         return true;
     }

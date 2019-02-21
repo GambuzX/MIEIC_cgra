@@ -93,8 +93,11 @@ class MyScene extends CGFscene {
         if (this.displayBigTriangle)
             this.bigTriangle.display();
 
-        if (this.displayCircle)
+        if (this.displayCircle) {
+            this.circle.initBuffers();
             this.circle.display();
+        }
+
 
         // ---- END Primitive drawing section
     }

@@ -6,19 +6,18 @@
 class MyCircle extends CGFobject {
 	constructor(scene) {
 		super(scene);
+		this.n_vertices = 100;
 		this.initBuffers();
 	}
 	initBuffers() {
-
 		let radius = 2;
-		let n_vertices = 100;
 
 		this.vertices = [
 			0,0,0,
 		];
 
-		for (let i = 0; i < n_vertices; i++) {
-			let angle = 2*Math.PI/n_vertices * i;
+		for (let i = 0; i < this.n_vertices; i++) {
+			let angle = 2*Math.PI/this.n_vertices * i;
 
 			let x = radius * Math.cos(angle);
 			let y = radius * Math.sin(angle);
@@ -32,10 +31,10 @@ class MyCircle extends CGFobject {
 		this.indices = [
 		];
 
-		for (let i = 0; i < n_vertices; i++) {
+		for (let i = 0; i < this.n_vertices; i++) {
 			this.indices.push(0);
-			this.indices.push((i % n_vertices) + 1);
-			this.indices.push(((i+1) % n_vertices) + 1);
+			this.indices.push((i % this.n_vertices) + 1);
+			this.indices.push(((i+1) % this.n_vertices) + 1);
 		}
 
 
