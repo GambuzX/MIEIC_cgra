@@ -22,6 +22,11 @@ class MyInterface extends CGFinterface {
         //Slider element in GUI
         this.gui.add(this.scene, 'scaleFactor', 0.1, 5).name('Scale Factor');
 
+        //Square and Triangle display checkboxes
+        this.gui.add(this.scene, 'displaySquare').name("Display Square");
+        this.gui.add(this.scene, 'displayTriangle').name("Display Triangle");
+        this.gui.add(this.scene, 'displayParalelogram').name("Display Paralelogram");
+
         return true;
     }
 }
