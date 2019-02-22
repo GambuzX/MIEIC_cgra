@@ -27,6 +27,8 @@ class MyScene extends CGFscene {
         this.smallTriangle = new MyTriangleSmall(this);
         this.bigTriangle = new MyTriangleBig(this);
         this.circle = new MyCircle(this);
+        this.prev_circle_verts = this.circle.n_vertices;
+        this.prev_circle_radius = this.circle.radius;
 
         //Objects connected to MyInterface
         this.displayAxis = true;
@@ -94,7 +96,13 @@ class MyScene extends CGFscene {
             this.bigTriangle.display();
 
         if (this.displayCircle) {
-            this.circle.initBuffers();
+
+            //Update circle vertices if it changed
+            if (this.prev_circle_verts != this.circle.n_vertices || this.prev_circle_radius != this.circle.radius) {
+                this.prev_circle_verts = this.circle.n_vertices;
+                this.prev_circle_radius = this.circle.radius;
+                this.circle.initBuffers();
+            }
             this.circle.display();
         }
 

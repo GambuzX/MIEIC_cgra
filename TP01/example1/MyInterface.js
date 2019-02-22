@@ -22,14 +22,17 @@ class MyInterface extends CGFinterface {
         //Slider element in GUI
         this.gui.add(this.scene, 'scaleFactor', 0.1, 5).name('Scale Factor');
 
-        //Square and Triangle display checkboxes
+        //Elements display checkboxes
         this.gui.add(this.scene, 'displayDiamond').name("Diamond");
         this.gui.add(this.scene, 'displayTriangle').name("Triangle");
         this.gui.add(this.scene, 'displaySmallTriangle').name("Small Triangle");
         this.gui.add(this.scene, 'displayBigTriangle').name("Big Triangle");
         this.gui.add(this.scene, 'displayParalelogram').name("Paralelogram");
         this.gui.add(this.scene, 'displayCircle').name("Circle");
+
+        //Circle vertice number and radius
         this.gui.add(this.scene.circle, 'n_vertices').name("Circle Vertices");
+        this.gui.add(this.scene.circle, 'radius').name("Circle Radius");
 
         return true;
     }
