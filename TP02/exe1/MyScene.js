@@ -25,6 +25,7 @@ class MyScene extends CGFscene {
         //Objects connected to MyInterface
         this.displayAxis = true;
         this.scaleFactor = 1;
+        this.displayTangram = true;
 
         this.tangram = new MyTangram(this);
 
@@ -68,6 +69,7 @@ class MyScene extends CGFscene {
         this.multMatrix(sca);
 
 
-        this.tangram.display(this);
+        if (this.displayTangram)
+            this.tangram.display();
     }
 }
