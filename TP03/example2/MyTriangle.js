@@ -12,6 +12,9 @@ class MyTriangle extends CGFobject {
 		this.vertices = [
 			-1, 1, 0,
 			-1, -1, 0,
+			1, -1, 0,
+			-1, 1, 0,
+			-1, -1, 0,
 			1, -1, 0
 		];
 
@@ -19,6 +22,16 @@ class MyTriangle extends CGFobject {
 			0, 1, 2,
 			0, 2, 1
 		];
+
+		this.normals = [];
+		this.normals.push(0, 0, 1);
+		this.normals.push(0, 0, 1);
+		this.normals.push(0, 0, 1);
+		this.normals.push(0, 0, -1);
+		this.normals.push(0, 0, -1);
+		this.normals.push(0, 0, -1);
+
+
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();
 	}

@@ -65,4 +65,12 @@ class MyTangram extends CGFobject {
         this.smallTriangle.display();
         this.scene.popMatrix();
 	}
+
+    enableNormalViz() {
+        this.diamond.enableNormalViz();
+        this.triangle.enableNormalViz();
+        this.paralelogram.enableNormalViz();
+        this.bigTriangle.enableNormalViz();
+        this.smallTriangle.enableNormalViz();
+    }
 }
