@@ -71,26 +71,19 @@ class MyScene extends CGFscene {
         this.multMatrix(sca);
 
         this.pushMatrix();
-
-        this.translate( 0.5, 0, -0.5);
-
-        let angle = -90 * Math.PI / 180;
-        this.rotate(angle, 1, 0 ,0);
-
-        // DRAW TANGRAM + BASE 
-        if (this.displayTangram)
-            this.tangram.display();
-
+        
+        this.translate(2.5,0,5.2);
+        this.rotate(-Math.PI / 2, 1,0,0);
+        
         this.pushMatrix();
-
-        this.translate(0, 0, -0.51);
+        this.translate(0.5,-0.3,-0.5);
+        this.scale(6,11,1);
         if (this.displayCube)
             this.unitCube.display();
-
         this.popMatrix();
-        // END DRAW TANGRAM + BASE 
 
-
+        if (this.displayTangram)
+            this.tangram.display();
         this.popMatrix();
     }
 }
