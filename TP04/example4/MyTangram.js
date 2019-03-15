@@ -47,6 +47,7 @@ class MyTangram extends CGFobject {
         var small_tri_rot_angle = 90 * Math.PI / 180;
         this.scene.translate(0, 2*Math.sqrt(2)+1, 0);
         this.scene.rotate(small_tri_rot_angle, 0, 0, 1);
+        this.smallTriangle.updateTexCoords([0, 0, 0.25, 0.25, 0, 0.5]);
         this.smallTriangle.display();
         this.scene.popMatrix();
 
@@ -62,6 +63,7 @@ class MyTangram extends CGFobject {
         var big_triangle_rot = -90 * Math.PI / 180;
         this.scene.translate(0, -Math.sqrt(2), 0);
         this.scene.rotate(big_triangle_rot, 0, 0, 1);
+        this.bigTriangle.updateTexCoords([0,0,1,0,0.5,0.5]);
         this.bigTriangle.display();
         this.scene.popMatrix();  
 
