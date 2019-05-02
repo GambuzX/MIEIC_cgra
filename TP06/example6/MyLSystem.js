@@ -105,6 +105,26 @@ class MyLSystem extends CGFobject {
                     this.scene.popMatrix();
                     break;
 
+                case "\\":
+                    // positive rotation on xx axis
+                    this.scene.rotate(this.angle, 1, 0, 0);
+                    break;
+
+                case "/":
+                    // negative rotation on xx axis
+                    this.scene.rotate(-this.angle, 1, 0, 0);
+                    break;
+
+                case "^":
+                    // positive rotation on yy axis
+                    this.scene.rotate(this.angle, 0, 1, 0);
+                    break;
+
+                case "&":
+                    // negative rotation on yy axis
+                    this.scene.rotate(-this.angle, 0, 1, 0);
+                    break;
+
                 // processa primitiva definida na gramatica, se existir
                 default:
                     var primitive=this.grammar[this.axiom[i]];
