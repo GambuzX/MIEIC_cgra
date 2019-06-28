@@ -10,7 +10,7 @@ Exercises solved during practical classes for the CGRA curricular unit.
 
 <br>
 
-**Final Grade: ??**
+**Final Grade: 19**
 
 ### Technologies and Software Used
 * Javascript
